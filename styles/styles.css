@@ -4,6 +4,40 @@
 }
 
 body{
-    background-color: rgb(29, 29, 29);
-    /* font-size: 50px; */
+    background-color: rgb(23, 13, 21);
+}
+
+.window{
+    text-align: left;
+    margin: auto;
+    width: 600px;
+    height: 360px;
+    top: 25vh;
+    position: relative;
+    border-radius: 10px;
+    background: #30353a;
+    transition: all 0.5s ease-out;
+    z-index: 999;
+    display: block;
+}
+
+.window #chat-box {
+    color: white;
+    font-family: Menlo, Monaco;
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+    top: .1px; 
+    bottom: 0;
+    box-sizing: border-box;
+    position: absolute;
+    overflow: auto;
+}
+
+.window #chat-box span.input:focus-visible {
+    outline: none;
+}
+
+.window .tick {
+    color: #EC4891;
 }

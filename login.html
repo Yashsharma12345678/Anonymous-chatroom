@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Menlo, Monaco;
+        }
+
+        body{
+            background-color:#30353a;
+        }
+
+        .inputBoxes{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+            min-height: 100vh;
+        }
+
+        .username, .roomname{
+            position: relative;
+            width: 250px;
+        }
+
+        input{
+            width: 100%;
+            padding: 10px;
+            color: #fff;
+            font-size: 1em;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: #30353a;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .username span, .roomname span{
+            position:absolute ;
+            left: 0;
+            padding: 10px;
+            pointer-events: none;
+            font-size: 1em;
+            color: rgba(255, 255, 255, 0.25);
+            text-transform: uppercase;
+            transition: 0.5s;
+        }
+        .username input:valid ~ span,
+        .username input:focus ~ span,
+        .roomname input:valid ~ span,
+        .roomname input:focus ~ span{
+            color: rgb(254, 192, 255);
+            transform: translateX(10px) translateY(-9px);
+            font-size: .65em;
+            letter-spacing: 0.2em;
+            padding: 0 10px;
+            background: #30353a;
+            border-left: 1px solid rgb(254, 192, 255);
+            border-right: 1px solid rgb(254, 192, 255);
+        }
+        
+        .roomname input:valid ~ span,
+        .roomname input:focus ~ span{
+            background: rgb(254, 192, 255);
+            color:#30353a;
+            border-radius: 2px;
+        }
+        .username input:valid ,
+        .username input:focus, 
+        .roomname input:valid, 
+        .roomname input:focus {
+            transition: 0.5s;
+            border: 1px solid rgb(254, 192, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="inputBoxes">
+        <div class="username">
+            <input type="text" required="required" >
+            <Span>User Name</Span>
+        </div>
+        <div class="roomname">
+            <input type="text" required="required" >
+            <Span>Room Name</Span>
+        </div>
+    </div>
+</body>
+</html>
